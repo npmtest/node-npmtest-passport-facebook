@@ -1,5 +1,7 @@
-<html lang="en"><head>
-    <title>Code coverage report for node-npmtest-passport-facebook/passport-facebook/lib/strategy.js</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for node-npmtest-passport-facebook/node_modules/passport-facebook/lib/strategy.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,7 +194,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-passport-facebook">npmtest-passport-facebook (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-passport-facebook/passport-facebook/lib/strategy.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-passport-facebook/node_modules/passport-facebook/lib/strategy.js</span></h1>
     <h2>
         
         Statements: <span class="metric">13.04% <small>(9 / 69)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../index.html">All files</a> » <a href="index.html">node-npmtest-passport-facebook/passport-facebook/lib/</a> » strategy.js</div>
+    <div class="path"><a href="../../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-passport-facebook/node_modules/passport-facebook/lib/</a> &#187; strategy.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -741,18 +743,18 @@ var OAuth2Strategy = require('passport-oauth2')
  * @param {function} verify
  * @access public
  */
-<span class="fstat-no" title="function not covered">function Strategy(options, verify) {</span>
-<span class="cstat-no" title="statement not covered">  options = options || {};</span>
-<span class="cstat-no" title="statement not covered">  options.authorizationURL = options.authorizationURL || 'https://www.facebook.com/dialog/oauth';</span>
-<span class="cstat-no" title="statement not covered">  options.tokenURL = options.tokenURL || 'https://graph.facebook.com/oauth/access_token';</span>
-<span class="cstat-no" title="statement not covered">  options.scopeSeparator = options.scopeSeparator || ',';</span>
+<span class="fstat-no" title="function not covered" >function Strategy(options, verify) {</span>
+<span class="cstat-no" title="statement not covered" >  options = options || {};</span>
+<span class="cstat-no" title="statement not covered" >  options.authorizationURL = options.authorizationURL || 'https://www.facebook.com/dialog/oauth';</span>
+<span class="cstat-no" title="statement not covered" >  options.tokenURL = options.tokenURL || 'https://graph.facebook.com/oauth/access_token';</span>
+<span class="cstat-no" title="statement not covered" >  options.scopeSeparator = options.scopeSeparator || ',';</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  OAuth2Strategy.call(this, options, verify);</span>
-<span class="cstat-no" title="statement not covered">  this.name = 'facebook';</span>
-<span class="cstat-no" title="statement not covered">  this._profileURL = options.profileURL || 'https://graph.facebook.com/v2.5/me';</span>
-<span class="cstat-no" title="statement not covered">  this._profileFields = options.profileFields || null;</span>
-<span class="cstat-no" title="statement not covered">  this._enableProof = options.enableProof;</span>
-<span class="cstat-no" title="statement not covered">  this._clientSecret = options.clientSecret;</span>
+<span class="cstat-no" title="statement not covered" >  OAuth2Strategy.call(this, options, verify);</span>
+<span class="cstat-no" title="statement not covered" >  this.name = 'facebook';</span>
+<span class="cstat-no" title="statement not covered" >  this._profileURL = options.profileURL || 'https://graph.facebook.com/v2.5/me';</span>
+<span class="cstat-no" title="statement not covered" >  this._profileFields = options.profileFields || null;</span>
+<span class="cstat-no" title="statement not covered" >  this._enableProof = options.enableProof;</span>
+<span class="cstat-no" title="statement not covered" >  this._clientSecret = options.clientSecret;</span>
 }
 &nbsp;
 // Inherit from `OAuth2Strategy`.
@@ -766,16 +768,16 @@ util.inherits(Strategy, OAuth2Strategy);
  * @param {object} options
  * @access protected
  */
-Strategy.prototype.authenticate = <span class="fstat-no" title="function not covered">function(req, options) {</span>
+Strategy.prototype.authenticate = <span class="fstat-no" title="function not covered" >function(req, options) {</span>
   // Facebook doesn't conform to the OAuth 2.0 specification, with respect to
   // redirecting with error codes.
   //
   //   FIX: https://github.com/jaredhanson/passport-oauth/issues/16
-<span class="cstat-no" title="statement not covered">  if (req.query &amp;&amp; req.query.error_code &amp;&amp; !req.query.error) {</span>
-<span class="cstat-no" title="statement not covered">    return this.error(new FacebookAuthorizationError(req.query.error_message, parseInt(req.query.error_code, 10)));</span>
+<span class="cstat-no" title="statement not covered" >  if (req.query &amp;&amp; req.query.error_code &amp;&amp; !req.query.error) {</span>
+<span class="cstat-no" title="statement not covered" >    return this.error(new FacebookAuthorizationError(req.query.error_message, parseInt(req.query.error_code, 10)));</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  OAuth2Strategy.prototype.authenticate.call(this, req, options);</span>
+<span class="cstat-no" title="statement not covered" >  OAuth2Strategy.prototype.authenticate.call(this, req, options);</span>
 };
 &nbsp;
 /**
@@ -789,23 +791,23 @@ Strategy.prototype.authenticate = <span class="fstat-no" title="function not cov
  * @return {object}
  * @access protected
  */
-Strategy.prototype.authorizationParams = <span class="fstat-no" title="function not covered">function (options) {</span>
-<span class="cstat-no" title="statement not covered">  var params = {};</span>
+Strategy.prototype.authorizationParams = <span class="fstat-no" title="function not covered" >function (options) {</span>
+<span class="cstat-no" title="statement not covered" >  var params = {};</span>
 &nbsp;
   // https://developers.facebook.com/docs/reference/dialogs/oauth/
-<span class="cstat-no" title="statement not covered">  if (options.display) {</span>
-<span class="cstat-no" title="statement not covered">    params.display = options.display;</span>
+<span class="cstat-no" title="statement not covered" >  if (options.display) {</span>
+<span class="cstat-no" title="statement not covered" >    params.display = options.display;</span>
   }
   
   // https://developers.facebook.com/docs/facebook-login/reauthentication/
-<span class="cstat-no" title="statement not covered">  if (options.authType) {</span>
-<span class="cstat-no" title="statement not covered">    params.auth_type = options.authType;</span>
+<span class="cstat-no" title="statement not covered" >  if (options.authType) {</span>
+<span class="cstat-no" title="statement not covered" >    params.auth_type = options.authType;</span>
   }
-<span class="cstat-no" title="statement not covered">  if (options.authNonce) {</span>
-<span class="cstat-no" title="statement not covered">    params.auth_nonce = options.authNonce;</span>
+<span class="cstat-no" title="statement not covered" >  if (options.authNonce) {</span>
+<span class="cstat-no" title="statement not covered" >    params.auth_nonce = options.authNonce;</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  return params;</span>
+<span class="cstat-no" title="statement not covered" >  return params;</span>
 };
 &nbsp;
 /**
@@ -828,9 +830,9 @@ Strategy.prototype.authorizationParams = <span class="fstat-no" title="function 
  * @param {function} done
  * @access protected
  */
-Strategy.prototype.userProfile = <span class="fstat-no" title="function not covered">function(accessToken, done) {</span>
-<span class="cstat-no" title="statement not covered">  var url = uri.parse(this._profileURL);</span>
-<span class="cstat-no" title="statement not covered">  if (this._enableProof) {</span>
+Strategy.prototype.userProfile = <span class="fstat-no" title="function not covered" >function(accessToken, done) {</span>
+<span class="cstat-no" title="statement not covered" >  var url = uri.parse(this._profileURL);</span>
+<span class="cstat-no" title="statement not covered" >  if (this._enableProof) {</span>
     // Secure API call by adding proof of the app secret.  This is required when
     // the "Require AppSecret Proof for Server API calls" setting has been
     // enabled.  The proof is a SHA256 hash of the access token, using the app
@@ -838,43 +840,43 @@ Strategy.prototype.userProfile = <span class="fstat-no" title="function not cove
     //
     // For further details, refer to:
     // https://developers.facebook.com/docs/reference/api/securing-graph-api/    
-<span class="cstat-no" title="statement not covered">    var proof = crypto.createHmac('sha256', this._clientSecret).update(accessToken).digest('hex');</span>
-<span class="cstat-no" title="statement not covered">    url.search = (url.search ? url.search + '&amp;' : '') + 'appsecret_proof=' + proof;</span>
+<span class="cstat-no" title="statement not covered" >    var proof = crypto.createHmac('sha256', this._clientSecret).update(accessToken).digest('hex');</span>
+<span class="cstat-no" title="statement not covered" >    url.search = (url.search ? url.search + '&amp;' : '') + 'appsecret_proof=' + proof;</span>
   }
-<span class="cstat-no" title="statement not covered">  if (this._profileFields) {</span>
-<span class="cstat-no" title="statement not covered">    var fields = this._convertProfileFields(this._profileFields);</span>
-<span class="cstat-no" title="statement not covered">    if (fields !== '') { <span class="cstat-no" title="statement not covered">url.search = (url.search ? url.search + '&amp;' : '') + 'fields=' + fields; </span>}</span>
+<span class="cstat-no" title="statement not covered" >  if (this._profileFields) {</span>
+<span class="cstat-no" title="statement not covered" >    var fields = this._convertProfileFields(this._profileFields);</span>
+<span class="cstat-no" title="statement not covered" >    if (fields !== '') { <span class="cstat-no" title="statement not covered" >url.search = (url.search ? url.search + '&amp;' : '') + 'fields=' + fields; </span>}</span>
   }
-<span class="cstat-no" title="statement not covered">  url = uri.format(url);</span>
+<span class="cstat-no" title="statement not covered" >  url = uri.format(url);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  this._oauth2.get(url, accessToken, <span class="fstat-no" title="function not covered">function (err, body, res) {</span></span>
-<span class="cstat-no" title="statement not covered">    var json;</span>
+<span class="cstat-no" title="statement not covered" >  this._oauth2.get(url, accessToken, <span class="fstat-no" title="function not covered" >function (err, body, res) {</span></span>
+<span class="cstat-no" title="statement not covered" >    var json;</span>
     
-<span class="cstat-no" title="statement not covered">    if (err) {</span>
-<span class="cstat-no" title="statement not covered">      if (err.data) {</span>
-<span class="cstat-no" title="statement not covered">        try {</span>
-<span class="cstat-no" title="statement not covered">          json = JSON.parse(err.data);</span>
+<span class="cstat-no" title="statement not covered" >    if (err) {</span>
+<span class="cstat-no" title="statement not covered" >      if (err.data) {</span>
+<span class="cstat-no" title="statement not covered" >        try {</span>
+<span class="cstat-no" title="statement not covered" >          json = JSON.parse(err.data);</span>
         } catch (_) {}
       }
       
-<span class="cstat-no" title="statement not covered">      if (json &amp;&amp; json.error &amp;&amp; typeof json.error == 'object') {</span>
-<span class="cstat-no" title="statement not covered">        return done(new FacebookGraphAPIError(json.error.message, json.error.type, json.error.code, json.error.error_subcode, json.error.fbtrace_id));</span>
+<span class="cstat-no" title="statement not covered" >      if (json &amp;&amp; json.error &amp;&amp; typeof json.error == 'object') {</span>
+<span class="cstat-no" title="statement not covered" >        return done(new FacebookGraphAPIError(json.error.message, json.error.type, json.error.code, json.error.error_subcode, json.error.fbtrace_id));</span>
       }
-<span class="cstat-no" title="statement not covered">      return done(new InternalOAuthError('Failed to fetch user profile', err));</span>
+<span class="cstat-no" title="statement not covered" >      return done(new InternalOAuthError('Failed to fetch user profile', err));</span>
     }
     
-<span class="cstat-no" title="statement not covered">    try {</span>
-<span class="cstat-no" title="statement not covered">      json = JSON.parse(body);</span>
+<span class="cstat-no" title="statement not covered" >    try {</span>
+<span class="cstat-no" title="statement not covered" >      json = JSON.parse(body);</span>
     } catch (ex) {
-<span class="cstat-no" title="statement not covered">      return done(new Error('Failed to parse user profile'));</span>
+<span class="cstat-no" title="statement not covered" >      return done(new Error('Failed to parse user profile'));</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var profile = Profile.parse(json);</span>
-<span class="cstat-no" title="statement not covered">    profile.provider = 'facebook';</span>
-<span class="cstat-no" title="statement not covered">    profile._raw = body;</span>
-<span class="cstat-no" title="statement not covered">    profile._json = json;</span>
+<span class="cstat-no" title="statement not covered" >    var profile = Profile.parse(json);</span>
+<span class="cstat-no" title="statement not covered" >    profile.provider = 'facebook';</span>
+<span class="cstat-no" title="statement not covered" >    profile._raw = body;</span>
+<span class="cstat-no" title="statement not covered" >    profile._json = json;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    done(null, profile);</span>
+<span class="cstat-no" title="statement not covered" >    done(null, profile);</span>
   });
 };
 &nbsp;
@@ -886,12 +888,12 @@ Strategy.prototype.userProfile = <span class="fstat-no" title="function not cove
  * @return {Error}
  * @access protected
  */
-Strategy.prototype.parseErrorResponse = <span class="fstat-no" title="function not covered">function(body, status) {</span>
-<span class="cstat-no" title="statement not covered">  var json = JSON.parse(body);</span>
-<span class="cstat-no" title="statement not covered">  if (json.error &amp;&amp; typeof json.error == 'object') {</span>
-<span class="cstat-no" title="statement not covered">    return new FacebookTokenError(json.error.message, json.error.type, json.error.code, json.error.error_subcode, json.error.fbtrace_id);</span>
+Strategy.prototype.parseErrorResponse = <span class="fstat-no" title="function not covered" >function(body, status) {</span>
+<span class="cstat-no" title="statement not covered" >  var json = JSON.parse(body);</span>
+<span class="cstat-no" title="statement not covered" >  if (json.error &amp;&amp; typeof json.error == 'object') {</span>
+<span class="cstat-no" title="statement not covered" >    return new FacebookTokenError(json.error.message, json.error.type, json.error.code, json.error.error_subcode, json.error.fbtrace_id);</span>
   }
-<span class="cstat-no" title="statement not covered">  return OAuth2Strategy.prototype.parseErrorResponse.call(this, body, status);</span>
+<span class="cstat-no" title="statement not covered" >  return OAuth2Strategy.prototype.parseErrorResponse.call(this, body, status);</span>
 };
 &nbsp;
 /**
@@ -901,8 +903,8 @@ Strategy.prototype.parseErrorResponse = <span class="fstat-no" title="function n
  * @return {string}
  * @access protected
  */
-Strategy.prototype._convertProfileFields = <span class="fstat-no" title="function not covered">function(profileFields) {</span>
-<span class="cstat-no" title="statement not covered">  var map = {</span>
+Strategy.prototype._convertProfileFields = <span class="fstat-no" title="function not covered" >function(profileFields) {</span>
+<span class="cstat-no" title="statement not covered" >  var map = {</span>
     'id':          'id',
     'username':    'username',
     'displayName': 'name',
@@ -914,21 +916,21 @@ Strategy.prototype._convertProfileFields = <span class="fstat-no" title="functio
     'photos':      'picture'
   };
   
-<span class="cstat-no" title="statement not covered">  var fields = [];</span>
+<span class="cstat-no" title="statement not covered" >  var fields = [];</span>
   
-<span class="cstat-no" title="statement not covered">  profileFields.forEach(<span class="fstat-no" title="function not covered">function(f) {</span></span>
+<span class="cstat-no" title="statement not covered" >  profileFields.forEach(<span class="fstat-no" title="function not covered" >function(f) {</span></span>
     // return raw Facebook profile field to support the many fields that don't
     // map cleanly to Portable Contacts
-<span class="cstat-no" title="statement not covered">    if (typeof map[f] === 'undefined') { <span class="cstat-no" title="statement not covered">return fields.push(f); </span>};</span>
+<span class="cstat-no" title="statement not covered" >    if (typeof map[f] === 'undefined') { <span class="cstat-no" title="statement not covered" >return fields.push(f); </span>};</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (Array.isArray(map[f])) {</span>
-<span class="cstat-no" title="statement not covered">      Array.prototype.push.apply(fields, map[f]);</span>
+<span class="cstat-no" title="statement not covered" >    if (Array.isArray(map[f])) {</span>
+<span class="cstat-no" title="statement not covered" >      Array.prototype.push.apply(fields, map[f]);</span>
     } else {
-<span class="cstat-no" title="statement not covered">      fields.push(map[f]);</span>
+<span class="cstat-no" title="statement not covered" >      fields.push(map[f]);</span>
     }
   });
 &nbsp;
-<span class="cstat-no" title="statement not covered">  return fields.join(',');</span>
+<span class="cstat-no" title="statement not covered" >  return fields.join(',');</span>
 };
 &nbsp;
 &nbsp;
@@ -936,11 +938,10 @@ Strategy.prototype._convertProfileFields = <span class="fstat-no" title="functio
 module.exports = Strategy;
 &nbsp;
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 17:10:27 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Mon Apr 17 2017 21:37:44 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>
