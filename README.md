@@ -1,4 +1,7 @@
-# test coverage for  [passport-facebook (v2.1.1)](https://github.com/jaredhanson/passport-facebook#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-passport-facebook.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-passport-facebook) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-passport-facebook.svg)](https://travis-ci.org/npmtest/node-npmtest-passport-facebook)
+# npmtest-passport-facebook
+
+#### basic test coverage for  [passport-facebook (v2.1.1)](https://github.com/jaredhanson/passport-facebook#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-passport-facebook.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-passport-facebook) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-passport-facebook.svg)](https://travis-ci.org/npmtest/node-npmtest-passport-facebook)
+
 #### Facebook authentication strategy for Passport.
 
 [![NPM](https://nodei.co/npm/passport-facebook.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/passport-facebook)
@@ -89,7 +92,8 @@
     "scripts": {
         "test": "mocha --require test/bootstrap/node test/*.test.js"
     },
-    "version": "2.1.1"
+    "version": "2.1.1",
+    "bin": {}
 }
 ```
 
